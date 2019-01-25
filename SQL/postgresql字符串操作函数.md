@@ -1,0 +1,38 @@
+###PostgreSQL中提供的字符串操作符列表
+
+
+
+| **函数**                                                     | **返回类型** | **描述**                                                     | **例子**                                       | **结果**                           |
+| ------------------------------------------------------------ | ------------ | ------------------------------------------------------------ | ---------------------------------------------- | ---------------------------------- |
+| string \|\| string                                           | text         | 字串连接                                                     | 'Post' \|\| 'greSQL'                           | PostgreSQL                         |
+| bit_length(string)                                           | int          | 字串里二进制位的个数                                         | bit_length('jose')                             | 32                                 |
+| char_length(string)                                          | int          | 字串中的字符个数                                             | char_length('jose')                            | 4                                  |
+| convert(string using conversion_name)                        | text         | 使用指定的转换名字改变编码。                                 | convert('PostgreSQL' using iso_8859_1_to_utf8) | 'PostgreSQL'                       |
+| lower(string)                                                | text         | 把字串转化为小写                                             | lower('TOM')                                   | tom                                |
+| octet_length(string)                                         | int          | 字串中的字节数                                               | octet_length('jose')                           | 4                                  |
+| overlay(string placing string from int [for int])            | text         | 替换子字串                                                   | overlay('Txxxxas' placing 'hom' from 2 for 4)  | Thomas                             |
+| position(substring in string)                                | int          | 指定的子字串的位置                                           | position('om' in 'Thomas')                     | 3                                  |
+| substring(string [from int] [for int])                       | text         | 抽取子字串                                                   | substring('Thomas' from 2 for 3)               | hom                                |
+| substring(string from pattern)                               | text         | 抽取匹配 POSIX 正则表达式的子字串                            | substring('Thomas' from '...$')                | mas                                |
+| substring(string from pattern for escape)                    | text         | 抽取匹配SQL正则表达式的子字串                                | substring('Thomas' from '%#"o_a#"_' for '#')   | oma                                |
+| trim([leading \| trailing \| both] [characters] from string) | text         | 从字串string的开头/结尾/两边/ 删除只包含characters(缺省是一个空白)的最长的字串 | trim(both 'x' from 'xTomxx')                   | Tom                                |
+| upper(string)                                                | text         | 把字串转化为大写。                                           | upper('tom')                                   | TOM                                |
+| ascii(text)                                                  | int          | 参数第一个字符的ASCII码                                      | ascii('x')                                     | 120                                |
+| btrim(string text [, characters text])                       | text         | 从string开头和结尾删除只包含在characters里(缺省是空白)的字符的最长字串 | btrim('xyxtrimyyx','xy')                       | trim                               |
+| chr(int)                                                     | text         | 给出ASCII码的字符                                            | chr(65)                                        | A                                  |
+| convert(string text, [src_encoding name,] dest_encoding name) | text         | 把字串转换为dest_encoding                                    | convert( 'text_in_utf8', 'UTF8', 'LATIN1')     | 以ISO 8859-1编码表示的text_in_utf8 |
+| initcap(text)                                                | text         | 把每个单词的第一个子母转为大写，其它的保留小写。单词是一系列字母数字组成的字符，用非字母数字分隔。 | initcap('hi thomas')                           | Hi Thomas                          |
+| length(string text)                                          | int          | string中字符的数目                                           | length('jose')                                 | 4                                  |
+| lpad(string text, length int [, fill text])                  | text         | 通过填充字符fill(缺省时为空白)，把string填充为长度length。 如果string已经比length长则将其截断(在右边)。 | lpad('hi', 5, 'xy')                            | xyxhi                              |
+| ltrim(string text [, characters text])                       | text         | 从字串string的开头删除只包含characters(缺省是一个空白)的最长的字串。 | ltrim('zzzytrim','xyz')                        | trim                               |
+| md5(string text)                                             | text         | 计算给出string的MD5散列，以十六进制返回结果。                | md5('abc')                                     |                                    |
+| repeat(string text, number int)                              | text         | 重复string number次。                                        | repeat('Pg', 4)                                | PgPgPgPg                           |
+| replace(string text, from text, to text)                     | text         | 把字串string里出现地所有子字串from替换成子字串to。           | replace('abcdefabcdef', 'cd', 'XX')            | abXXefabXXef                       |
+| rpad(string text, length int [, fill text])                  | text         | 通过填充字符fill(缺省时为空白)，把string填充为长度length。如果string已经比length长则将其截断。 | rpad('hi', 5, 'xy')                            | hixyx                              |
+| rtrim(string text [, character text])                        | text         | 从字串string的结尾删除只包含character(缺省是个空白)的最长的字 | rtrim('trimxxxx','x')                          | trim                               |
+| split_part(string text, delimiter text, field int)           | text         | 根据delimiter分隔string返回生成的第field个子字串(1 Base)。   | split_part('abc~@~def~@~ghi', '~@~', 2)        | def                                |
+| strpos(string, substring)                                    | text         | 声明的子字串的位置。                                         | strpos('high','ig')                            | 2                                  |
+| substr(string, from [, count])                               | text         | 抽取子字串。                                                 | substr('alphabet', 3, 2)                       | ph                                 |
+| to_ascii(text [, encoding])                                  | text         | 把text从其它编码转换为ASCII。                                | to_ascii('Karel')                              | Karel                              |
+| to_hex(number int/bigint)                                    | text         | 把number转换成其对应地十六进制表现形式。                     | to_hex(9223372036854775807)                    | 7fffffffffffffff                   |
+| translate(string text, from text, to text)                   | text         | 把在string中包含的任何匹配from中的字符的字符转化为对应的在to中的字符。 | translate('12345', '14', 'ax')                 | a23x5                              |
