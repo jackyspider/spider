@@ -19,11 +19,11 @@
 | :active                     | a:active              | 选择活动链接                                              | 1    |
 | :hover                      | a:hover               | 选择鼠标在链接上面时                                      | 1    |
 | :focus                      | input:focus           | 选择具有焦点的输入元素                                    | 2    |
-| :first-letter               | p:first-letter        | 选择每一个<P>元素的第一个字母                             | 1    |
-| :first-line                 | p:first-line          | 选择每一个<P>元素的第一行                                 | 1    |
-| :first-child                | p:first-child         | 指定只有当<p>元素是其父级的第一个子级的样式。             | 2    |
-| :before                     | p:before              | 在每个<p>元素之前插入内容                                 | 2    |
-| :after                      | p:after               | 在每个<p>元素之后插入内容                                 | 2    |
+| :first-letter               | p:first-letter        | 选择每一个<P\>元素的第一个字母                            | 1    |
+| :first-line                 | p:first-line          | 选择每一个<P\>元素的第一行                                | 1    |
+| :first-child                | p:first-child         | 指定只有当<p\>元素是其父级的第一个子级的样式。            | 2    |
+| :before                     | p:before              | 在每个<p\>元素之前插入内容                                | 2    |
+| :after                      | p:after               | 在每个<p\>元素之后插入内容                                | 2    |
 | :lang(*language*)           | p:lang(it)            | 选择一个lang属性的起始值="it"的所有<p>元素                | 2    |
 | *element1*~*element2*       | p~ul                  | 选择p元素之后的每一个 同级 ul元素                         | 3    |
 | [*attribute*^=*value*\]     | a[src^="https"]       | 选择每一个src属性的值以"https"开头的元素                  | 3    |
