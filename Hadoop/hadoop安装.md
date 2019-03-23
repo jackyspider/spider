@@ -92,7 +92,7 @@ set JAVA_HOME=C:\Progra~1\Java\jdk1.8.0_11
 <configuration>
 <property>
     <name>fs.defaultFS</name>
-    <value>hdfs://172.16.0.10:8020</value>
+    <value>hdfs://localhost:8020</value>
 </property>
 </configuration>
 
@@ -195,7 +195,7 @@ set JAVA_HOME=C:\Progra~1\Java\jdk1.8.0_11
 
  
 
-始化，格式化hdfs磁盘
+初始化，格式化hdfs磁盘
 
 hadoop namenode -format 
 
