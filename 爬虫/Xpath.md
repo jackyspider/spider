@@ -140,6 +140,12 @@ xpath('//div[@id="content"][count(*)>=1]')
 #### 6 string-length()
 
 ```python
-xpath('//div[@id="content"][string-length()>1']
+xpath('//div[@id="content"][string-length()>1']) 
+#代表前面整个//div[@id="content"]所选择的元素的字符长度>1
+```
+
+```python
+xpath('//div[@id="content"][string-length(./p)>1]')
+#代表前面//div[@id="content"]中的第一个p子节点的字符长度>1
 ```
 
