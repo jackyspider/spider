@@ -116,7 +116,13 @@ xpath('//div[contains(@id,”test”)]’)
 与的关系 
 
 ```python
-xpath('//div[contains(@id,"test") and contains(@id,"title")]')
+xpath('//div[contains(@id,"test") and contains(@class,"title")]')
+```
+
+*两个选择框并列等同于and*
+
+```python
+xpath('div[contains(@id,"test")][contains(@class,"title")]')
 ```
 
 
@@ -134,7 +140,7 @@ xpath('//div[@id="test"]/text()')
 #### 5 count()
 
 ```python
-xpath('//div[@id="content"][count(*)>=1]')
+xpath('//div[@id="content"][count(tr)>=1]')
 ```
 
 #### 6 string-length()
