@@ -629,9 +629,14 @@ group() 返回被 RE 匹配的字符串。
 + \num 代表分组num匹配的文本
 + ?P=name 代表分组名为name匹配的文本
 
-re.findall(r"\b(?P<word\>\w+)\b\s+(?P=word)\b","hello go go hello") ==> ['go']
+
+
+```python
+re.findall(r"\b(?P<word>\w+)\b\s+(?P=word)\b","hello go go hello") ==> ['go']
 
 re.findall(r"\b(\w+)\b\s+(\1)\b",'hello go go hello') ==> ['go','go']
+
+```
 
 
 
