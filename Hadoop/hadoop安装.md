@@ -18,8 +18,6 @@ hadoop-2.7.3.tar.gz
 
  
 
- 
-
 安装 jdk-8u11-windows-x64.exe 
 
  
@@ -125,11 +123,13 @@ set JAVA_HOME=C:\Progra~1\Java\jdk1.8.0_11
 </property>
 
 <property>
-    <name>dfs.namenode.secondary.http-address</name><value>localhost:50090</value>
+    <name>dfs.namenode.secondary.http-address</name>
+    <value>localhost:50090</value>
 </property>
 
 <property>
-    <name>dfs.webhdfs.enabled</name><value>true</value>
+    <name>dfs.webhdfs.enabled</name>
+    <value>true</value>
 </property>
 </configuration>
 ```
@@ -154,22 +154,22 @@ set JAVA_HOME=C:\Progra~1\Java\jdk1.8.0_11
 ```xml
 <configuration>
 <property>
-    <name>yarn.resourcemanager.resource-tracker.address</name><value>172.16.0.10:8031</value>
+    <name>yarn.resourcemanager.resource-tracker.address</name><value>192.168.3.170:8031</value>
 </property>
     
 <property>
-    <name>yarn.resourcemanager.scheduler.address</name><value>172.16.0.10:8030</value>
+    <name>yarn.resourcemanager.scheduler.address</name><value>192.168.3.170:8030</value>
 </property>
     
 <property>
-    <name>yarn.resourcemanager.admin.address</name><value>172.16.0.10:8033</value>
+    <name>yarn.resourcemanager.admin.address</name><value>192.168.3.170:8033</value>
 </property>
     
 <property>
-    <name>yarn.resourcemanager.webapp.address</name><value>172.16.0.10:8088</value></property>
+    <name>yarn.resourcemanager.webapp.address</name><value>192.168.3.170:8088</value></property>
     
 <property>
-    <name>yarn.resourcemanager.address</name><value>172.16.0.10:8032</value>
+    <name>yarn.resourcemanager.address</name><value>192.168.3.170:8032</value>
 </property>
     
 <property>
