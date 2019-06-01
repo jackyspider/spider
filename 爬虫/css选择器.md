@@ -7,7 +7,7 @@
 | *                           | *                     | 选择所有元素                                              |
 | *element*                   | p                     | 选择所有p元素                                             |
 | *element,element*           | div,p                 | 选择所有div元素和p元素                                    |
-| *element* *element*         | div p                 | 选择div元素内的所有p元素                                  |
+| *element* *element*         | div p                 | 选择div元素内的所有p元素,递归查找                         |
 | *element*>*element*         | div>p                 | 选择所有父级是 div 元素的p 元素                           |
 | *element*+*element*         | div+p                 | 选择所有紧接着div元素之后的  同级 p元素                   |
 | [*attribute*\]              | [target]              | 选择所有带有target属性元素                                |
@@ -28,7 +28,7 @@
 | *element1*~*element2*       | p~ul                  | 选择p元素之后的每一个 同级 ul元素                         |
 | [*attribute*^=*value*\]     | a[src^="https"]       | 选择每一个src属性的值以"https"开头的元素                  |
 | [*attribute*$=*value*\]     | a[src$=".pdf"]        | 选择每一个src属性的值以".pdf"结尾的元素                   |
-| [*attribute**=*value*\]     | a[src*="runoob"]      | 选择每一个src属性的值包含子字符串"runoob"的元素           |
+| [*attribute\*=*value\]      | a[src*="runoob"]      | 选择每一个src属性的值包含子字符串"runoob"的元素           |
 | :first-of-type              | p:first-of-type       | 选择每个p元素是其父级的第一个p元素                        |
 | :last-of-type               | p:last-of-type        | 选择每个p元素是其父级的最后一个p元素                      |
 | :only-of-type               | p:only-of-type        | 选择每个p元素是其父级的唯一p元素                          |
