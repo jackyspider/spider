@@ -65,7 +65,7 @@ XPath的谓词即筛选表达式，类似于SQL的where子句.
 | /messages/message[1] /child::node()<br>/messages/message[1]/node()<br>/messages/message[position()=1]/node()<br>//message[@id=1] /node() | 第一个message节点下的所有子节点                              |
 | //message[@id=1] //child::node()                             | 递归所有子节点（无限深度）                                   |
 | //message[position()=1]/node()                               | 选择id=1的message节点以及id=0的message节点                   |
-| /messages/message[1] /parent::*                              | Messages节点                                                 |
+| /messages/message[1] /parent::*                              | messages节点,父节点                                          |
 | /body/attachments/parent::node()/<br />body/attachments/parent::*/body/attachments/.. | attachments节点的父节点。父节点只有一个,所以node()和* 返回结果一样。（..也表示父节点. 表示自身节点） |
 | //message[@id=0]/ancestor::*                                 | Ancestor轴表示所有的祖辈，父，祖父等。向上递归               |
 | //message[@id=0]/ancestor-or-self::*                         | 向上递归,包含自身                                            |
