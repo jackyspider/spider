@@ -163,7 +163,7 @@ def work(msg):
 	
 
 if __name__ == "__main__":
-	pool = multiprocessing.Pool(processes=5) # 创建4个进程
+	pool = multiprocessing.Pool(processes=4) # 创建4个进程
 	for i in range(20):
 		msg = "process %d" %(i)
 		pool.apply_async(work, (msg, ))#异步
